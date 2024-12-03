@@ -1,0 +1,17 @@
+.banner-control {
+  background-image: url(../assets/banner-control.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;    
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-control {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url(../assets/banner-joycard.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}

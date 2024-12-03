@@ -1,0 +1,139 @@
+footer {
+  width: 100%;
+  padding: 0 40px;
+  background-color: #F1F1F1;
+}
+
+footer .footer-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 32px;
+  padding: 40px 20px 12px;
+  border-bottom: 2px solid var(--secondary);
+}
+
+footer .web-horizontal-content {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 80px;
+  width: 100%
+}
+
+footer .about img {
+  width: 250px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+footer .about p {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+footer .links-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer .links a {
+  color: var(--dark);
+}
+
+footer .links .main-link {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+footer .address {
+  color: var(--dark);
+  font-size: 14px;
+  text-align: end;
+}
+
+footer .footer-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  font-weight: 600;
+  padding: 24px 20px;
+}
+
+footer .footer-2 a {
+  color: var(--secondary);
+}
+
+footer .whatsapp i {
+  font-size: 20px;
+}
+
+footer .whatsapp {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+footer .social-media {
+  display: flex;
+  gap: 8px;
+}
+
+footer .social-media i {
+  font-size: 24px;
+}
+
+footer .footer-2 a:hover {
+  color: var(--primary)
+}
+
+@media screen and (min-width: 1200px) {
+  footer .links-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer .web-horizontal-content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  footer .about {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer .footer-2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer .links .main-link {
+    margin-bottom: 0;
+  }
+
+  footer .links {
+    gap: 8px;
+  }
+}

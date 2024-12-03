@@ -1,0 +1,40 @@
+:root {
+  --primary: #41B490;
+  --secondary: #2A3176;
+  --dark: #282828;
+  --light: #FAFAFA;
+}
+
+* {
+  font-family: "Open Sans";
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  transition: all 0.5s ease;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  background-color: #FEFEFE;
+}
+
+.primary-button {
+  background-color: var(--primary);
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px 0px rgba(65, 65, 65, 0.2);
+}

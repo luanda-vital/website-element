@@ -1,0 +1,114 @@
+
+
+.duvidas {
+  padding: 60px 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .duvidas {
+    padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .duvidas {
+    padding: 40px 20px;
+  }
+}
+
+.duvidas h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion {
+  border: 1.5px solid #ecedf5;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.accordion button {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f1f1f9;
+  padding: 12px 20px;
+  width: 100%;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary);
+  text-align: left;
+}
+
+.accordion i {
+  font-size: 18px;
+}
+
+.active i {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 20px 24px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+
+  color: var(--dark);
+}
+
+.accordion a {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.accordion p, .accordion li {
+  margin-bottom: 16px;
+}
+
+.accordion p:last-child {
+  margin-bottom: 0;
+}
+
+.banner {
+  min-height: calc(90vh - 90px);
+  padding: 60px 80px;
+  margin-top: 90px;
+}
+
+.banner h1 {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.banner p {
+  font-size: 18px;
+  color: var(--secondary);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.banner .text {
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    padding: 60px 40px;
+  }
+}

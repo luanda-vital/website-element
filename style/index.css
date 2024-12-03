@@ -1,0 +1,118 @@
+.mundo-joy {
+  margin-top: 90px;
+  padding: 60px 80px;
+  display: flex;
+  position: relative;
+}
+
+.mundo-joy h1 {
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.mundo-joy .text {
+  font-size: 20px;
+  color: var(--dark);
+  margin-bottom: 40px;
+}
+
+.mundo-joy .cards-container:nth-of-type(1) {
+  margin-bottom: 32px;
+}
+
+.mundo-joy .cards-container-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.mundo-joy i {
+  font-size: 24px;
+}
+
+
+.mundo-joy h3 {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.mundo-joy .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-left: 16px;
+}
+
+.mundo-joy .card {
+  background-color: white;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px;
+  border-radius: 12px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.mundo-joy .card img {
+  height: 60px;
+}
+
+.mundo-joy .card p {
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.mundo-joy .image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mundo-joy .image-container img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.mundo-joy .home-element {
+  z-index: -5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90%;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1100px) {
+  .mundo-joy .image-container {
+    display: none;
+  }
+
+  .mundo-joy .home-element {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .mundo-joy {
+    padding: 40px;
+  }
+
+  .mundo-joy .home-element {
+    opacity: 0.4;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mundo-joy .card {
+    width: 100%;
+  }
+}
