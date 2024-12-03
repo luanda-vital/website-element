@@ -5,6 +5,32 @@
   background-repeat: no-repeat;    
 }
 
+.control-client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 80px;
+  row-gap: 32px;
+  background-color: var(--tertiary);
+  padding: 40px;
+}
+
+.control-img {
+  height: 250px;
+}
+
+.client-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.control-logo {
+  height: 60px;
+}
+
 @media screen and (max-width: 1000px) {
   .banner-control {
     background:
@@ -13,5 +39,11 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .client-button-container {
+    align-items: center;
   }
 }

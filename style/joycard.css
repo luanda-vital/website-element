@@ -5,6 +5,51 @@
   background-repeat: no-repeat;
 }
 
+.sm-banner {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.sm-banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  column-gap: 40px;
+  row-gap: 16px;
+}
+
+.sm-banner-content h3 {
+  font-size: 18px;
+  color: var(--light);
+}
+
+.joycard-media {
+  background-color: var(--secondary);
+}
+
+.joycard-media-links {
+  display: flex;
+  gap: 20px;
+}
+
+.joycard-media-links a {
+  font-size: 28px;
+  color: var(--primary);
+}
+
+.joycard-media-links a:hover {
+  color: var(--light);
+  transform: rotate(-30deg) scale(1.5);
+}
+
+.joycard-cta {
+  background-color: var(--tertiary);
+}
+
 @media screen and (max-width: 1000px) {
   .banner-joycard {
     background:
@@ -13,5 +58,16 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sm-banner-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sm-banner-content h3 {
+    text-align: center;
   }
 }
