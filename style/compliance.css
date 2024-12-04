@@ -1,0 +1,19 @@
+.banner-compliance {
+  background-image: url(../assets/banner/banner-compliance.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-compliance {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url(../assets/banner/banner-compliance.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
