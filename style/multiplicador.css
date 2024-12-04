@@ -1,5 +1,5 @@
 .banner-multiplicador {
-  background-image: url(../assets/banner-multiplicador.jpg);
+  background-image: url(../assets/banner/banner-multiplicador.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   .banner-multiplicador {
     background:
       linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-      url(../assets/banner-multiplicador.jpg);
+      url(../assets/banner/banner-multiplicador.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
