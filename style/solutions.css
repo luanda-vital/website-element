@@ -81,34 +81,3 @@
 .accordion p:last-child {
   margin-bottom: 0;
 }
-
-.banner {
-  min-height: calc(90vh - 90px);
-  padding: 60px 80px;
-  margin-top: 90px;
-}
-
-.banner h1 {
-  color: var(--secondary);
-  font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-
-.banner p {
-  font-size: 18px;
-  color: var(--secondary);
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-
-.banner .text {
-  max-width: 600px;
-  margin-bottom: 60px;
-}
-
-@media screen and (max-width: 600px) {
-  .banner {
-    padding: 60px 40px;
-  }
-}
