@@ -1,0 +1,56 @@
+.base {
+  padding: 60px 80px;
+  flex-grow: 1;
+}
+
+.base .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1200px;
+  gap: 32px;
+  margin: 0 auto;
+}
+
+.base i {
+  font-size: 56px;
+  color: var(--tertiary);
+}
+
+.base h3 {
+  margin: 8px 0 20px;
+  color: var(--tertiary);
+}
+
+.base p, .base ul {
+  color: var(--dark);
+}
+
+.base ul {
+  --icon-space: 1.3em;
+  list-style: none;
+  padding: 0;
+}
+
+.base li {
+  padding-left: var(--icon-space);
+  margin-bottom: 12px;
+}
+
+.base li:last-child {
+  margin-bottom: 0;
+}
+
+.base li:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
+  color: var(--secondary);
+}
+
+@media screen and (max-width: 600px) {
+  .base {
+    padding: 60px 40px;
+  }
+}

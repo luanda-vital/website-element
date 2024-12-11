@@ -14,6 +14,12 @@
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   transition: all 0.5s ease;
   cursor: pointer;
@@ -73,15 +79,32 @@ body {
   color: var(--secondary);
   margin-bottom: 16px;
   font-weight: 500;
+  max-width: 600px;
 }
 
 .banner .text {
-  max-width: 600px;
   margin-bottom: 60px;
 }
+
+.banner .banner-content {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .banner p {
+    font-size: 20px;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   .banner {
     padding: 60px 40px;
   }
+}
+
+.first-section {
+  margin-top: 90px;
 }

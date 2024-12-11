@@ -1,0 +1,19 @@
+.banner-quem-somos {
+  background-image: url(../../assets/banner/banner-quem-somos.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-quem-somos {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+      url(../../assets/banner/banner-quem-somos.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
