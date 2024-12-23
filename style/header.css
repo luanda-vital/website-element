@@ -13,16 +13,24 @@ header .header-content {
   align-items: center;
   gap: 20px;
   
-  height: 90px;
+  height: 100px;
   background-color: white;
 }
 
 header .header-logo {
   margin-left: 40px;
+  margin-top: -10px;
+}
+
+header .header-logo p {
+  font-size: 13px;
+  color: var(--secondary);
+  font-weight: 500;
+  font-style: italic;
 }
 
 header .header-logo img {
-  height: 64px;
+  height: 56px;
 }
 
 header .header-button-icon {
