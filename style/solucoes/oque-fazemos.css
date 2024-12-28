@@ -163,6 +163,8 @@
   display: flex;
   gap: 8px;
   align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .carousel-container {
@@ -267,6 +269,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1400px) {
@@ -348,10 +352,12 @@ ul.sublist {
   margin-left: 24px;
 }
 
-.secao-avaliacoes {
+.conteudo-secao-avaliacoes {
   display: flex;
   gap: 32px;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 @media (max-width: 850px) {
