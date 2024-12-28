@@ -1,0 +1,474 @@
+.secao-oque-fazemos {
+  background-color: #40446c;
+}
+
+.secao-oque-fazemos .content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.secao-oque-fazemos h1 {
+  color: #41b490;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.secao-oque-fazemos .texts {
+  display: flex;
+  column-gap: 32px;
+}
+
+.secao-oque-fazemos .texts .coluna-1 {
+  width: 100%;
+}
+
+.secao-oque-fazemos .texts p {
+  width: 100%;
+  color: var(--light);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 650px) {
+  .secao-oque-fazemos .texts {
+    flex-direction: column;
+  }
+}
+
+.nossas-solucoes .solucao {
+  display: flex;
+  align-items: stretch;
+}
+
+.solucoes .titulo {
+  position: relative;
+  width: 180%;
+}
+
+.solucoes .titulo h2 {
+  color: var(--secondary);
+  margin-bottom: 100px;
+}
+
+.solucoes .titulo p {
+  color: var(--secondary);
+  font-weight: 500;
+  position: absolute;
+  top: 40px;
+  max-width: 650px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--secondary);
+}
+
+.nossas-solucoes .solucao-control {
+  background-color: var(--secondary);
+}
+
+.nossas-solucoes .solucao .content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nossas-solucoes .solucao-joycard .content {
+  padding: 40px 0 60px 60px;
+  align-items: flex-start;
+}
+
+.nossas-solucoes .solucao-control .content {
+  padding: 60px 60px 60px 0;
+  align-items: flex-end;
+}
+
+.nossas-solucoes .solucao .logo {
+  height: 90px;
+}
+
+.nossas-solucoes .solucao-control p {
+  text-align: right;
+  color: var(--light);
+}
+
+.nossas-solucoes .solucao .main-img {
+  min-width: 60vw;
+  background-size: cover;
+  background-repeat: no-repeat;    
+}
+
+.nossas-solucoes .solucao-joycard .main-img {
+  background-image: url(../../assets/solucoes/joycard.png);
+  background-position: bottom left;
+}
+
+@media (max-width: 1000px) {
+  .solucoes .titulo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .solucoes .titulo h2 {
+    margin-bottom: 20px;
+  }
+
+  .solucoes .titulo p {
+    position: relative;
+    top: 0;
+    max-width: none;
+  }
+
+  .nossas-solucoes .solucao-joycard .content {
+    padding: 60px 40px 60px;
+  }
+
+  .nossas-solucoes .solucao-joycard .main-img {
+    display: none;
+  }
+}
+
+.nossas-solucoes .solucao-control .main-img {
+  background-image: url(../../assets/solucoes/control-eco.png);
+  background-position: top right;
+}
+
+@media (max-width: 850px) {
+  .nossas-solucoes .solucao-control .main-img {
+    display: none;
+  }
+
+  .nossas-solucoes .solucao-control .content {
+    padding: 60px 40px 60px;
+    width: 100%;
+  }
+
+  .nossas-solucoes .solucao-control p {
+    max-width: 600px;
+}
+}
+
+.secao-quem {
+  width: 100%;
+}
+
+.secao-quem h2 {
+  color: var(--primary);
+  margin-bottom: 32px;
+  text-align: center;
+ }
+
+/* Estilização geral */
+.carousel-container-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Estilo dos itens do carrossel */
+.carousel-item {
+  position: relative;
+  min-width: calc(25% - 20px); /* Mostra 3 itens por vez, ajuste conforme necessário */
+  height: 200px; /* Altura fixa para os itens */
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Estilo das imagens */
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher sem distorções */
+  z-index: 0;
+}
+
+/* Sobreposição escura */
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(45, 45, 45, 0.5); /* Fundo preto com opacidade */
+  z-index: 1;
+}
+
+/* Texto no centro */
+.carousel-item .content {
+  position: relative;
+  z-index: 2; /* Coloca o texto acima da sobreposição */
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
+}
+
+/* Botões de navegação */
+.prev-btn, .next-btn {
+  color: var(--primary);
+  font-size: 24px;
+}
+
+@media (max-width: 1000px) {
+  .carousel-item {
+      min-width: calc(33.33% - 20px); /* Mostra 2 itens em telas médias */
+  }
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+  .carousel-item {
+      min-width: calc(50% - 20px); /* Mostra 2 itens em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+      min-width: calc(100% - 20px); /* Mostra 1 item em telas pequenas */
+  }
+}
+
+.secao-beneficios {
+  background-color: #a5dbca;
+}
+
+
+.secao-beneficios h2 {
+  color: var(--secondary);
+  text-align: center;
+}
+
+.secao-beneficios .subtitulo {
+  color: var(--dark);
+  font-weight: 500;
+  margin: 16px auto 40px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.beneficios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1400px) {
+  .beneficios {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .beneficios {
+    grid-template-columns: 1fr;
+  }
+}
+
+.beneficio {
+  background-color: #ffffff;
+  position: relative;
+  padding: 40px 20px 28px;
+  border-radius: 12px;
+}
+
+.icone {
+  position: absolute;
+  top: -28px;
+  left: 50%; /* Move o elemento para 50% da largura do contêiner */
+  transform: translateX(-50%);
+  font-size: 28px;
+  padding: 8px;
+  background-color: var(--secondary);
+  width: 56px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  color: var(--light);
+}
+
+.numero {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 24px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.beneficio h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--secondary);
+}
+
+ul {
+  --icon-space: 1.5em;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding-left: var(--icon-space);
+  margin-bottom: 12px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: calc( var(--icon-space) * -1 );
+  width: var(--icon-space);
+  color: var(--secondary);
+}
+
+ul.sublist {
+  margin-left: 24px;
+}
+
+.secao-avaliacoes {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .secao-avaliacoes {
+    flex-direction: column;
+  }
+
+  .secao-avaliacoes .titulo {
+    display: flex;
+    align-items: end;
+  }
+
+  .secao-avaliacoes .titulo h2 {
+    margin-top: 0;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .avaliacoes {
+    flex-direction: column;
+  }
+}
+
+.secao-avaliacoes .titulo span {
+  color: var(--secondary);
+}
+
+.secao-avaliacoes .titulo {
+  color: var(--primary);
+  min-width: 150px;
+}
+
+.secao-avaliacoes .titulo h2 {
+  margin-top: 20px;s
+}
+
+.secao-avaliacoes .titulo i {
+  font-size: 48px;
+}
+
+.avaliacoes {
+  display: flex;
+  gap: 16px;
+}
+
+.avaliacoes .coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.avaliacao {
+  padding: 20px 24px;
+  background-color: white;
+  border-radius: 16px;
+  border: solid 1px #e6e6e6;
+}
+
+.avaliacao .estrelas {
+  color: #ffbc0f;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.secao-contato {
+  background-color: var(--secondary);
+}
+
+.secao-contato .contato-whatsapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.secao-contato .contato-whatsapp p {
+  font-size: 20px;
+}
+
+.secao-contato .contato-whatsapp .interesse {
+  font-weight: 500;
+  color: var(--light);
+}
+
+.secao-contato .contato-whatsapp .conversa {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.secao-contato .contato-whatsapp i {
+  font-size: 24px;
+}
+
+.secao-avaliacoes, .secao-quem, .secao-beneficios, .secao-oque-fazemos, .secao-contato {
+  padding: 48px 80px 60px;
+}
+
+@media (max-width: 500px) {
+  .secao-contato .contato-whatsapp {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 850px) {
+  .secao-avaliacoes, .secao-quem, .secao-beneficios, .secao-oque-fazemos, .secao-contato {
+    padding: 48px 60px 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .secao-avaliacoes, .secao-quem, .secao-beneficios, .secao-oque-fazemos, .secao-contato {
+    padding: 40px;
+  }
+}

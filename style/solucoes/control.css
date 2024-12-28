@@ -1,5 +1,5 @@
 .banner-control {
-  background-image: url(../assets/banner/banner-control.jpg);
+  background-image: url(../../assets/banner/banner-control.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;    
@@ -35,7 +35,7 @@
   .banner-control {
     background:
       linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-      url(../assets/banner/banner-joycard.jpg);
+      url(../../assets/banner/banner-joycard.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

@@ -48,6 +48,10 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
 }
 
 .sm-btn {
