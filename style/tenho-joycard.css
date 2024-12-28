@@ -1,0 +1,154 @@
+.secao-instrucoes h2 {
+  color: var(--secondary);
+  margin-bottom: 32px;
+}
+
+.instrucoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 44px;
+  margin-bottom: 32px
+}
+
+@media (min-width: 1400px) {
+  .instrucoes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .instrucoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.instrucao {
+  background-color: #cbe7df;
+  padding: 20px 20px 20px 44px;
+  border-radius: 8px;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.numero {
+  font-size: 20px;
+  padding: 4px;
+  background-color: var(--primary);
+  min-width: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36px;
+  color: var(--light);
+  font-weight: 700;
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.informacoes-extras {
+  font-style: italic;
+  text-align: end;
+}
+
+.secao-instrucoes, .secao-canais {
+  padding: 48px 80px 60px;
+}
+
+@media (max-width: 850px) {
+  .secao-instrucoes, .secao-canais {
+    padding: 48px 60px 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .secao-instrucoes, .secao-canais {
+    padding: 40px;
+  }
+}
+
+.secao-canais {
+  background-color: var(--secondary);
+}
+
+.secao-canais .canais-conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.secao-canais .principal {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 20px;
+}
+
+.secao-canais .secundario {
+  color: var(--light);
+  font-size: 20px;
+}
+
+.canais {
+  display: flex;
+  gap: 32px;
+}
+
+.canal {
+  display: flex;
+  flex-direction: column;
+}
+
+.nome-canal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--light);
+}
+
+.nome-canal i {
+  font-size: 20px;
+}
+
+.sm-btn {
+  font-weight: 600;
+  width: max-content;
+}
+
+@media (max-width: 800px) {
+  .secao-canais .canais-conteudo {
+    flex-direction: column;
+  }
+
+  .secao-canais .titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .secao-canais .canais {
+    width: 100%;
+  }
+
+  .secao-canais .canal {
+    width: 100%;
+  }
+
+  .secao-canais .sm-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .secao-canais .canais {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
