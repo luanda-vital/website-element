@@ -15,3 +15,230 @@
     background-repeat: no-repeat;
   }
 }
+
+.secao-porques {
+  background-color: #edf7f4;
+}
+
+.secao-porques h2 {
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.secao-porques .porques {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .secao-porques .porques {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .secao-porques .porques {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secao-porques .porque {
+  background-color: #ffffff;
+  position: relative;
+  padding: 40px 20px 28px;
+  border-radius: 12px;
+}
+
+.secao-porques .icone {
+  position: absolute;
+  top: -28px;
+  left: 50%; /* Move o elemento para 50% da largura do contêiner */
+  transform: translateX(-50%);
+  font-size: 28px;
+  padding: 8px;
+  background-color: #8d92c6;
+  width: 56px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  color: var(--light);
+}
+
+.secao-porques .porque h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: var(--secondary);
+}
+
+.secao-porques .porque p {
+  text-align: center;
+}
+
+.secao-funcionamento h2 {
+  color: var(--primary);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.secao-funcionamento .comos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.secao-funcionamento .dividido {
+  display: flex;
+  gap: 20px
+}
+
+@media (max-width: 600px) {
+  .secao-funcionamento .dividido {
+    flex-direction: column;
+  }
+}
+
+.secao-funcionamento .como {
+  display: flex;
+  padding: 20px 16px;
+  border: solid 1px #acd1ec;
+  border-radius: 12px;
+  gap: 16px;
+  width: 100%;
+}
+
+.secao-funcionamento .numero {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--tertiary);
+}
+
+.secao-funcionamento .como h3 {
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.secao-beneficios {
+  background-color: var(--secondary);
+}
+
+.secao-beneficios h2 {
+  color: var(--primary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+
+.secao-beneficios .beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 20px;
+}
+
+.secao-beneficios .beneficio {
+  flex: 1 1 250px;
+  text-align: center;
+  color: var(--light);
+  font-size: 17px;
+}
+
+.secao-beneficios .beneficio i {
+  color: var(--primary);
+  margin-right: 4px;
+  font-size: 20px;
+}
+
+.secao-passos {
+  background-color: #edf7f4;
+}
+
+.secao-passos h2 {
+  color: var(--secondary);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.secao-passos h2 i {
+  margin-top: 4px;
+}
+
+.secao-passos .passos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 44px;
+}
+
+@media (min-width: 1400px) {
+  .secao-passos .passos {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .secao-passos .passos {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secao-passos .passo {
+  background-color: #cbe7df;
+  padding: 16px 16px 16px 40px;
+  border-radius: 8px;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  width: 100%;
+}
+
+.secao-passos .numero {
+  font-size: 20px;
+  padding: 4px;
+  background-color: var(--primary);
+  min-width: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36px;
+  color: var(--light);
+  font-weight: 700;
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.secao-porques, .secao-funcionamento, .secao-beneficios, .secao-passos {
+  padding: 48px 80px 60px;
+}
+
+@media (max-width: 850px) {
+  .secao-porques, .secao-funcionamento, .secao-beneficios, .secao-passos {
+    padding: 48px 60px 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .secao-porques, .secao-funcionamento, .secao-beneficios, .secao-passos {
+    padding: 40px;
+  }
+}
+
+.conteudo-secao {
+  max-width: 1400px;
+  margin: 0 auto;
+}
