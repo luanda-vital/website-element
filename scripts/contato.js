@@ -15,7 +15,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        accessKey: "2d11b544-4a1e-43e5-a2e0-a3ed69a0bb32",
+        accessKey: "d3ed1b36-6b13-4829-8d99-35c25fc5da60",
         ...contact
       })
     });
