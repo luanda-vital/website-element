@@ -144,7 +144,7 @@
 
   .nossas-solucoes .solucao-control p {
     max-width: 600px;
-}
+  }
 }
 
 .secao-quem {
@@ -157,7 +157,6 @@
   text-align: center;
  }
 
-/* Estilização geral */
 .carousel-container-wrapper {
   width: 100%;
   display: flex;
@@ -178,11 +177,10 @@
   transition: transform 0.5s ease;
 }
 
-/* Estilo dos itens do carrossel */
 .carousel-item {
   position: relative;
-  min-width: calc(25% - 20px); /* Mostra 3 itens por vez, ajuste conforme necessário */
-  height: 200px; /* Altura fixa para os itens */
+  min-width: calc(25% - 20px);
+  height: 200px;
   margin: 0 10px;
   display: flex;
   justify-content: center;
@@ -190,39 +188,35 @@
   overflow: hidden;
 }
 
-/* Estilo das imagens */
 .carousel-item img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem preencher sem distorções */
+  object-fit: cover;
   z-index: 0;
 }
 
-/* Sobreposição escura */
 .carousel-item .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:rgba(45, 45, 45, 0.5); /* Fundo preto com opacidade */
+  background-color:rgba(45, 45, 45, 0.5);
   z-index: 1;
 }
 
-/* Texto no centro */
 .carousel-item .content {
   position: relative;
-  z-index: 2; /* Coloca o texto acima da sobreposição */
+  z-index: 2;
   text-align: center;
   color: white;
   font-size: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
 }
 
-/* Botões de navegação */
 .prev-btn, .next-btn {
   color: var(--primary);
   font-size: 24px;
@@ -230,20 +224,19 @@
 
 @media (max-width: 1000px) {
   .carousel-item {
-      min-width: calc(33.33% - 20px); /* Mostra 2 itens em telas médias */
+      min-width: calc(33.33% - 20px);
   }
 }
 
-/* Responsividade */
 @media (max-width: 800px) {
   .carousel-item {
-      min-width: calc(50% - 20px); /* Mostra 2 itens em telas médias */
+      min-width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 600px) {
   .carousel-item {
-      min-width: calc(100% - 20px); /* Mostra 1 item em telas pequenas */
+      min-width: calc(100% - 20px);
   }
 }
 
@@ -265,7 +258,7 @@
   text-align: center;
 }
 
-.beneficios {
+.secao-beneficios .beneficios {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
@@ -275,28 +268,28 @@
 }
 
 @media (min-width: 1400px) {
-  .beneficios {
+  .secao-beneficios .beneficios {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 @media (max-width: 700px) {
-  .beneficios {
+  .secao-beneficios .beneficios {
     grid-template-columns: 1fr;
   }
 }
 
-.beneficio {
+.secao-beneficios .beneficio {
   background-color: #ffffff;
   position: relative;
   padding: 40px 20px 28px;
   border-radius: 12px;
 }
 
-.icone {
+.secao-beneficios .icone {
   position: absolute;
   top: -28px;
-  left: 50%; /* Move o elemento para 50% da largura do contêiner */
+  left: 50%;
   transform: translateX(-50%);
   font-size: 28px;
   padding: 8px;
@@ -310,7 +303,7 @@
   color: var(--light);
 }
 
-.numero {
+.secao-beneficios .numero {
   position: absolute;
   top: 8px;
   left: 12px;
@@ -319,28 +312,28 @@
   font-weight: 700;
 }
 
-.beneficio h3 {
+.secao-beneficios .beneficio h3 {
   text-align: center;
   margin-bottom: 16px;
   color: var(--secondary);
 }
 
-ul {
+.secao-beneficios ul {
   --icon-space: 1.5em;
   list-style: none;
   padding: 0;
 }
 
-li {
+.secao-beneficios li {
   padding-left: var(--icon-space);
   margin-bottom: 12px;
 }
 
-li:last-child {
+.secao-beneficios li:last-child {
   margin-bottom: 0;
 }
 
-li:before {
+.secao-beneficios li:before {
   content: "\f00c";
   font-family: FontAwesome;
   display: inline-block;
@@ -349,7 +342,7 @@ li:before {
   color: var(--secondary);
 }
 
-ul.sublist {
+.secao-beneficios ul.sublist {
   margin-left: 24px;
 }
 
@@ -616,5 +609,9 @@ ul.sublist {
 @media (max-width: 600px) {
   .secao-avaliacoes, .secao-quem, .secao-beneficios, .secao-oque-fazemos, .secao-contato {
     padding: 40px;
+  }
+
+  .secao-quem {
+    padding: 20px;
   }
 }

@@ -2,34 +2,68 @@ const carousel = document.querySelector('.carousel');
 const nextBtn = document.querySelector('.next-btn');
 const prevBtn = document.querySelector('.prev-btn');
 
-let currentIndex = 0; // Índice do item atual
-const totalItems = carousel.children.length; // Total de itens no carrossel
-const visibleItems = 4; // Quantidade de itens visíveis
+let currentIndex = 0;
+let visibleItems = 4;
+let itemWidth = 0;
 
-// Obter largura do item e gap do CSS
-const itemStyle = getComputedStyle(carousel.children[0]);
-const itemWidth = carousel.children[0].offsetWidth + parseInt(itemStyle.marginRight); // Largura + margem direita
+const updateItemWidth = () => {
+  const containerWidth = carousel.parentElement.offsetWidth;
+  itemWidth = containerWidth / visibleItems;
+  const items = carousel.querySelectorAll('.carousel-item');
+  
+  items.forEach(item => {
+    item.style.width = `${itemWidth}px`;
+  });
+};
 
-// Função para atualizar o carrossel
-function updateCarousel() {
-    const offset = -(currentIndex * itemWidth);
-    carousel.style.transform = `translateX(${offset}px)`;
-}
+const updateCarousel = () => {
+  const offset = -(currentIndex * itemWidth);
+  carousel.style.transition = 'transform 0.5s ease';
+  carousel.style.transform = `translateX(${offset}px)`;
+};
 
-// Botão "Próximo"
+const updateVisibleItems = () => {
+  const width = window.innerWidth;
+
+  if (width <= 600) {
+    visibleItems = 1;
+  } else if (width <= 800) {
+    visibleItems = 2;
+  } else if (width <= 1000) {
+    visibleItems = 3;
+  } else {
+    visibleItems = 4;
+  }
+};
+
+const adjustIndex = () => {
+  const totalItems = carousel.children.length;
+  
+  if (currentIndex < 0) {
+    currentIndex = totalItems - visibleItems;
+  } else if (currentIndex >= totalItems - visibleItems + 1) {
+    currentIndex = 0;
+  }
+};
+
 nextBtn.addEventListener('click', () => {
-    currentIndex++;
-    if (currentIndex > totalItems - visibleItems) {
-        currentIndex = 0; // Volta ao início
-    }
-    updateCarousel();
+  currentIndex++;
+  adjustIndex();
+  updateCarousel();
 });
 
-// Botão "Anterior"
 prevBtn.addEventListener('click', () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = totalItems - visibleItems; // Vai para o final
-    }
-    updateCarousel();
+  currentIndex--;
+  adjustIndex();
+  updateCarousel();
 });
+
+window.addEventListener('resize', () => {
+  updateVisibleItems();
+  updateItemWidth();
+  updateCarousel();
+});
+
+updateVisibleItems();
+updateItemWidth();
+updateCarousel();

@@ -57,7 +57,7 @@
 .secao-porques .icone {
   position: absolute;
   top: -28px;
-  left: 50%; /* Move o elemento para 50% da largura do contêiner */
+  left: 50%;
   transform: translateX(-50%);
   font-size: 28px;
   padding: 8px;

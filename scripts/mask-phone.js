@@ -2,10 +2,8 @@ function applyMask() {
   const input = document.getElementById('phone');
   let value = input.value;
 
-  // Remove tudo que não for número
   value = value.replace(/\D/g, '');
 
-  // Adiciona o +55 automaticamente, mas permite que o usuário edite
   if (value.length <= 2) {
     input.value = `(${value})`;
   } else if (value.length <= 6) {

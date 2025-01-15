@@ -71,7 +71,7 @@ header .dropdown:hover i {
   transform: rotate(180deg);
 }
 
-header .dropdown:hover .header-button {
+header .dropdown:hover .header-button, header .dropdown:focus .header-button {
   color: var(--primary);
 }
 
@@ -93,7 +93,7 @@ header .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-header .dropdown:hover .dropdown-content {
+header .dropdown:hover .dropdown-content, header .dropdown:focus .dropdown-content {
   display: flex;
   flex-direction: column;
 }

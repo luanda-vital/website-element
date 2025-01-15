@@ -1,9 +1,8 @@
 document.getElementById("contact-form").addEventListener("submit", async function(event) {
-  event.preventDefault();  // Impede o comportamento de redirecionamento do formulário
+  event.preventDefault();
 
   const form = event.target;
 
-  // Obtendo os dados do formulário
   const contact = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
@@ -12,12 +11,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   };
 
   try {
-    // Enviando os dados via AJAX usando fetch
     const res = await fetch("https://api.staticforms.xyz/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        accessKey: "2d11b544-4a1e-43e5-a2e0-a3ed69a0bb32",  // Substitua pela sua chave de acesso
+        accessKey: "2d11b544-4a1e-43e5-a2e0-a3ed69a0bb32",
         ...contact
       })
     });
