@@ -112,6 +112,10 @@
   opacity: 0.8;
 }
 
+.mundo-joy .home-element-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
   .mundo-joy .image-container {
     display: none;
@@ -135,5 +139,22 @@
 @media screen and (max-width: 600px) {
   .mundo-joy .card {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mundo-joy .home-element {
+    display: none;
+  }
+
+  .mundo-joy .home-element-mobile {
+    display: block;
+    z-index: -5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    width: 100%;
+    opacity: 0.3;
   }
 }
