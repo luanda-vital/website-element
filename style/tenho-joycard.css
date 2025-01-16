@@ -98,7 +98,7 @@
 
 .canais {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .canal {
@@ -151,4 +151,10 @@
     flex-direction: column;
     gap: 24px;
   }
+}
+
+.email {
+  font-weight: 600;
+  color: white;
+  padding: 10px 0;
 }

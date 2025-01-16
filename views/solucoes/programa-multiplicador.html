@@ -13,6 +13,9 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
     <link rel="stylesheet" href="../../style/header.css">
@@ -122,9 +125,9 @@
           </p>
         </div>
 
-        <a class="btn" href="mailto:comercial@element-b.com.br?subject=Programa%20Multiplicador&body=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20Programa%20Multiplicador.">
+        <button class="btn scroll-button">
           Tenho interesse em ser um Multiplicador
-        </a>
+        </button>
       </div>
     </section>
 
@@ -322,7 +325,7 @@
               correlagem em indústrias, varejo, imobiliária, saúde, seguros, banco, logística,
               agências de marketing e comunicação, empresas da área financeira, contabilidade e controladoria,
               políticas públicas e governamental e construção civil.
-              <a href="mailto:comercial@element-b.com.br?subject=Programa%20Multiplicador&amp;body=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20Programa%20Multiplicador.">Entre em contato</a>,
+              <a class="scroll-button">Entre em contato</a>,
               conte a sua experiência profissional e avaliaremos juntos.
             </p>
           </div>
@@ -335,9 +338,7 @@
           </button>
           <div class="panel">
             <p>
-              <a href="mailto:comercial@element-b.com.br?subject=Programa%20Multiplicador&amp;body=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20o%20Programa%20Multiplicador.">
-                Entre em contato
-              </a>
+              <a class="scroll-button">Entre em contato</a>
               e conte a sua experiência profissional, a
               <b>Element Business Ecosystem</b>
               agendará uma conversa. Caso você se encante com a nossa propostae estiver dentro do perfil
@@ -346,6 +347,97 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="secao-contato">
+      <div class="conteudo-secao-contato">
+        <div class="infos">
+          <h2>
+            <span class="interesse">Quer se tornar um multiplicador?</span><br/>
+            <span class="conversa">Vamos conversar!</span>
+          </h2>
+  
+          <div class="links">
+            <div class="links-l">
+              <a href="https://wa.me/5511944708751?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Element" target="_blank" class="link-contato">
+                <i class="ph-light ph-whatsapp-logo"></i>
+                <p>+55 (11) 94470-8751</p>
+              </a>
+      
+              <div class="link-contato">
+                <i class="ph-light ph-envelope-simple"></i>
+                <p>comercial@element-b.com.br</p>
+              </div>
+            </div>
+    
+            <div class="line"></div>
+    
+            <div class="links-sm">
+              <h4>Redes sociais</h4>
+    
+              <div class="redes-sociais">
+                <a
+                  href="https://www.instagram.com/element_incentivos/"
+                  target="_blank"
+                  aria-label="Nosso Instagram"
+                >
+                  <i class="ph-fill ph-instagram-logo"></i>
+                </a>
+
+                <a
+                  href="https://web.facebook.com/elementbusinessecosystem"
+                  target="_blank"
+                  aria-label="Nosso Facebook"
+                >
+                  <i class="ph-fill ph-facebook-logo"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/elementbusinessecosystem/"
+                  target="_blank"
+                  aria-label="Nosso Linkedin"
+                >
+                  <i class="ph-fill ph-linkedin-logo"></i>
+                </a>
+              </div>
+            </div>   
+          </div>
+        </div>
+  
+        <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="accessKey" value="d3ed1b36-6b13-4829-8d99-35c25fc5da60">
+
+          <div class="input-container">
+            <i class="ph ph-user"></i>
+            <input type="text" id="name" name="name" placeholder="Nome" autocomplete="off" required>
+          </div>
+
+          <div class="colunas">
+            <div class="input-container">
+              <i class="ph ph-envelope-simple"></i>
+              <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off" required>
+            </div>
+
+            <div class="input-container">
+              <i class="ph ph-phone"></i>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Telefone"
+                autocomplete="off" 
+                oninput="applyMask()"
+                required
+                minlength="10"
+              >
+            </div>
+          </div>
+          
+          <textarea id="message" name="message" rows="4" placeholder="Digite sua mensagem" autocomplete="off" required></textarea>
+
+          <button class="sm-btn" type="submit">Enviar</button>
+        </form>
       </div>
     </section>
 
@@ -473,4 +565,6 @@
 
   <script src="../../scripts/header.js"></script>
   <script src="../../scripts/accordion.js"></script>
+  <script src="../../scripts/contato.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </html>

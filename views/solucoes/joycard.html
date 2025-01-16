@@ -13,6 +13,9 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
     <link rel="stylesheet" href="../../style/header.css">
@@ -128,13 +131,12 @@
           </p>
         </div>
   
-        <a
-          href="mailto:comercial@element-b.com.br?subject=Joycard&body=Tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Joycard%20para%20os%20meus%20colaboradores."
-          class="btn"
+        <button
+          class="btn scroll-button"
           target="_blank"
         >
           Quero um Joycard para os meus colaboradores
-        </a>
+        </button>
       </div>
     </section>
 
@@ -434,40 +436,94 @@
       </div>
     </section>
 
-    <section class="sm-banner joycard-media">
-      <div class="sm-banner-content">
-        <h3>Saiba mais sobre o Joycard nas redes sociais</h3>
-        <div class="joycard-media-links">
-          <a
-            href="https://www.instagram.com/element_incentivos/"
-            target="_blank"
-            aria-label="Nosso Instagram"
-          >
-            <i class="ph-fill ph-instagram-logo"></i>
-          </a>
+    <section class="secao-contato">
+      <div class="conteudo-secao-contato">
+        <div class="infos">
+          <h2>
+            <span class="interesse">Quer um Joycard para os seus colaboradores?</span><br/>
+            <span class="conversa">Vamos conversar!</span>
+          </h2>
+  
+          <div class="links">
+            <div class="links-l">
+              <a href="https://wa.me/5511944708751?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Element" target="_blank" class="link-contato">
+                <i class="ph-light ph-whatsapp-logo"></i>
+                <p>+55 (11) 94470-8751</p>
+              </a>
+      
+              <div class="link-contato">
+                <i class="ph-light ph-envelope-simple"></i>
+                <p>comercial@element-b.com.br</p>
+              </div>
+            </div>
+    
+            <div class="line"></div>
+    
+            <div class="links-sm">
+              <h4>Saiba mais sobre o Joycard nas redes sociais:</h4>
+    
+              <div class="redes-sociais">
+                <a
+                  href="https://www.instagram.com/element_incentivos/"
+                  target="_blank"
+                  aria-label="Nosso Instagram"
+                >
+                  <i class="ph-fill ph-instagram-logo"></i>
+                </a>
 
-          <a
-            href="https://web.facebook.com/elementbusinessecosystem"
-            target="_blank"
-            aria-label="Nosso Facebook"
-          >
-            <i class="ph-fill ph-facebook-logo"></i>
-          </a>
+                <a
+                  href="https://web.facebook.com/elementbusinessecosystem"
+                  target="_blank"
+                  aria-label="Nosso Facebook"
+                >
+                  <i class="ph-fill ph-facebook-logo"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/company/elementbusinessecosystem/"
+                  target="_blank"
+                  aria-label="Nosso Linkedin"
+                >
+                  <i class="ph-fill ph-linkedin-logo"></i>
+                </a>
+              </div>
+            </div>   
+          </div>
         </div>
-      </div>
-    </section>
+  
+        <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+          <input type="hidden" name="accessKey" value="d3ed1b36-6b13-4829-8d99-35c25fc5da60">
 
-    <section class="sm-banner joycard-cta">
-      <div class="sm-banner-content">
-        <h3>Quer um Joycard para os seus colaboradores?</h3>
-        <a
-          href="mailto:comercial@element-b.com.br?subject=Joycard&body=Tenho%20interesse%20em%20saber%20mais%20sobre%20o%20Joycard%20para%20os%20meus%20colaboradores."
-          target="_blank"
-          class="sm-btn"
-          aria-label="Clique aqui para ter um Joycard para seus colaboradores."
-        >
-          Clique aqui!
-        </a>
+          <div class="input-container">
+            <i class="ph ph-user"></i>
+            <input type="text" id="name" name="name" placeholder="Nome" autocomplete="off" required>
+          </div>
+
+          <div class="colunas">
+            <div class="input-container">
+              <i class="ph ph-envelope-simple"></i>
+              <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off" required>
+            </div>
+
+            <div class="input-container">
+              <i class="ph ph-phone"></i>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Telefone"
+                autocomplete="off" 
+                oninput="applyMask()"
+                required
+                minlength="10"
+              >
+            </div>
+          </div>
+          
+          <textarea id="message" name="message" rows="4" placeholder="Digite sua mensagem" autocomplete="off" required></textarea>
+
+          <button class="sm-btn" type="submit">Enviar</button>
+        </form>
       </div>
     </section>
 
@@ -593,6 +649,8 @@
     </footer>
   </body>
 
+  <script src="../../scripts/contato.js"></script>
   <script src="../../scripts/header.js"></script>
   <script src="../../scripts/accordion.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </html>
